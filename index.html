@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>B2B Procurement Flow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Procurement Management System</h1>
+            <p>Implementación de Listas TypeScript (Caso B2B)</p>
+        </div>
+    </header>
+    
+    <main class="layout">
+        <aside class="sidebar">
+            <h2>📦 Nueva Requisición</h2>
+            <p class="subtitle">Rol: Shipping Officer</p>
+            
+            <div class="form-group">
+                <label>Nombre del Comprador / Cliente:</label>
+                <input type="text" id="req-buyer" placeholder="Ej. Empresa ABC S.A.">
+            </div>
+
+            <div class="form-group">
+                <label>Producto a solicitar:</label>
+                <input type="text" id="req-product" placeholder="Ej. Laptops Dell XPS">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Cantidad:</label>
+                    <input type="number" id="req-qty" placeholder="Ej. 10" min="1">
+                </div>
+                <div class="form-group">
+                    <label>Precio Unit ($):</label>
+                    <input type="number" id="req-price" placeholder="Ej. 1200" min="0.1" step="0.01">
+                </div>
+            </div>
+
+            <button id="btn-submit-req" class="btn-primary">Generar Requisición</button>
+        </aside>
+
+        <section id="dashboard" class="grid-board"></section>
+    </main>
+
+    <script type="module" src="dist/app.js"></script>
+</body>
+</html>

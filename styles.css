@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background: #f4f4f9;
+    margin: 0;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header p {
+    margin: 5px 0 0 0;
+    color: #bdc3c7;
+    font-size: 0.9rem;
+}
+
+header button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.grid-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.card-header h3 {
+    margin: 0;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background: #eee;
+}
+
+.badge.REJECTED {
+    background: #fadbd8;
+    color: #c0392b;
+}
+
+.badge.FULFILLED {
+    background: #d5f5e3;
+    color: #27ae60;
+}
+
+.tasks,
+.history {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+ul {
+    padding-left: 20px;
+    margin: 5px 0 0 0;
+    color: #444;
+}
+
+.note {
+    color: #e74c3c;
+    font-style: italic;
+}
+
+.actions {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 15px;
+}
+
+.actions button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+.actions button.reject {
+    background: #e74c3c;
+}
+
+.status-requisition {
+    border-color: #95a5a6;
+}
+
+.status-evaluation {
+    border-color: #f39c12;
+}
+
+.status-supervisor_review {
+    border-color: #e67e22;
+}
+
+.status-quote_preparation {
+    border-color: #3498db;
+}
+
+.status-order_preparation {
+    border-color: #9b59b6;
+}
+
+.status-fulfilled {
+    border-color: #2ecc71;
+}
+
+.status-rejected {
+    border-color: #e74c3c;
+    opacity: 0.8;
+}
+
+.layout {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+    min-height: calc(100vh - 80px);
+}
+
+.sidebar {
+    width: 320px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #27ae60;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.3rem;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #34495e;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.btn-primary {
+    width: 100%;
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #2ecc71;
+}
+
+.layout .grid-board {
+    padding: 0;
+    width: 100%;
+    flex: 1;
+}
